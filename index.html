@@ -4,7 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pseduo Site Education Based</title>
+  <title>Pseduo Site Education </title>
+  <style>
+  :root {
+    --c1: #4285f4;
+    --c2: #ea4335;
+    --c3: #fbbc05;
+    --c4: #34a853;
+    --size: 70px;
+    --bg: #0c1220;
+  }body { margin: 0; height: 100vh; display: grid; place-items: center; background: var(--bg); font-family: Inter, sans-serif; color: #e8eefc; }
+
+/* Modern Orbit Loader */ .orbit-loader { width: var(--size); height: var(--size); border-radius: 50%; position: relative; animation: rotate 1.15s linear infinite; }
+
+.orbit-loader span { position: absolute; width: 14px; height: 14px; border-radius: 50%; }
+
+.orbit-loader span:nth-child(1) { background: var(--c1); top: 0; left: 50%; transform: translateX(-50%); } .orbit-loader span:nth-child(2) { background: var(--c2); right: 0; top: 50%; transform: translateY(-50%); } .orbit-loader span:nth-child(3) { background: var(--c3); bottom: 0; left: 50%; transform: translateX(-50%); } .orbit-loader span:nth-child(4) { background: var(--c4); left: 0; top: 50%; transform: translateY(-50%); }
+
+@keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Glow ring */ .glow-ring { position: absolute; width: calc(var(--size) + 22px); height: calc(var(--size) + 22px); border-radius: 50%; border: 3px solid rgba(255,255,255,0.08); box-shadow: 0 0 22px rgba(255,255,255,0.15) inset; }
+
+/* Text */ h1 { margin-top: 25px; font-size: 18px; font-weight: 600; color: #dce7ff; letter-spacing: .5px; }
+
+.accent { background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3), var(--c4)); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700; } </style>
   <style>
     .slider {
   width: 90%;
@@ -85,21 +108,22 @@
   </style>
 </head>
 <body>
+  <h1 style="color:#fff;">1) Image slider</h1>
   <div class="slider">
   <div class="slides">
 
     <!-- Slide 1 -->
-    <a href="https://yourlink1.com" class="slide">
+    <a href="#" class="slide">
       <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="">
     </a>
 
     <!-- Slide 2 -->
-    <a href="https://yourlink2.com" class="slide">
+    <a href="#" class="slide">
       <img src="https://images.pexels.com/photos/9834376/pexels-photo-9834376.jpeg" alt="">
     </a>
 
     <!-- Slide 3 -->
-    <a href="https://yourlink3.com" class="slide">
+    <a href="#" class="slide">
       <img src="https://images.pexels.com/photos/1164985/pexels-photo-1164985.jpeg" alt="">
     </a>
 
@@ -177,5 +201,16 @@ function resetAuto() {
   }, 3000);
 }
 </script>
+<h1 style="color:#fff;margin-bottom:15px;">2) Pre - Loader</h1>
+<div class="container" style="text-align:center;">
+  <div class="orbit-loader">
+    <div class="glow-ring"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <h1>Loading <span class="accent">EduPilot</span>...</h1>
+</div></body>
 </body>
 </html>
